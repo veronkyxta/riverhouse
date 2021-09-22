@@ -1,0 +1,403 @@
+*
+    margin: 0
+    padding: 0
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    -o-box-sizing: border-box
+    box-sizing: border-box
+html
+    scroll-behavior: smooth
+.container
+    width: 90rem
+    max-width: calc( 100% - 2.5rem )
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 0 auto
+    overflow: hidden
+.hamburger
+	display: none
+.promo
+    height: 53.125rem
+    &__bg
+        width: 100%
+        position: absolute
+        top: 0
+        /** left: 50%
+        /** transform: translateX(-50%) **/
+        background: url(/assets/img/bg.jpg) center (center/cover) no-repeat
+        height: 62.5rem
+        background-attachment: fixed
+    &__wrapper
+        width: 90rem
+        margin: 0 auto
+        
+    &__title
+        margin-top: 22rem
+        text-align: center
+        font-family: Days Regular
+        font-weight: 400
+        font-style: normal
+        font-size: 5.625rem
+        color: $main_color
+        letter-spacing: 0.15em
+        text-transform: uppercase
+    &__btn
+        margin: 0 auto
+        width: 20.6875rem
+        height: 4.125rem
+        background: #CCC01F
+        border-radius: 2.1875rem
+        font-family: Roboto
+        font-style: normal
+        font-weight: 700
+        font-size: 1.375rem
+        line-height: 26px
+        letter-spacing: 5px
+        text-transform: uppercase
+        color: #FFFFFF
+        border: none
+        margin-top: 11.5rem
+        display: flex
+        justify-content: center
+        align-items: center
+        text-decoration: none
+        &:hover
+            cursor: pointer
+            background: linear-gradient(269.33deg, rgba(19, 18, 6, 0.5) 10.9%, rgba(116, 126, 14, 0.442448) 45.62%, rgba(214, 248, 9, 0.37) 93.15%), #CCC01F
+            box-shadow: 15px 15px 4px rgba(0, 0, 0, 0.25), inset 6px 5px 4px rgba(255, 255, 255, 0.2) 
+.header
+    height: 9.375rem
+    position: relative
+    &__row
+        position: absolute
+        width: 100%
+        height: 7.5rem
+        display: flex
+        justify-content: space-between
+        align-items: center
+        z-index: 50
+        top: 0px
+        /** transition: all 1s ease **/
+    &__scroll
+        display: none
+        position: fixed
+        background-color: #302C2C
+        height: 5rem
+        transition: all 1s ease
+    &__menu
+        width: 45rem
+        height: 3.125rem
+        margin-top: 4.375rem
+        display: flex
+        &_scroll
+            margin-top: 2.5rem
+.logo
+    position: relative
+    width: 14.0625rem
+    &__icon
+        padding-top: 3.125rem
+        &_scroll
+            padding-top: 2.5rem
+    &__title
+        position: absolute
+        top: 3.125rem
+        left: 7.5rem
+        font-family: Days Regular
+        font-weight: 400
+        font-style: normal
+        font-size: 1.75rem
+        letter-spacing: 0.12em
+        text-transform: lowercase
+        color: $main_color
+        text-decoration: none
+        &_scroll
+            color: #fff
+        &_footer
+            top: 10px
+            color: #fff
+            font-size: 1.5rem
+    &__line
+        position: absolute
+        top: 5rem
+        right: 5.625rem
+        width: 4.5rem
+        height: 7px
+        background: $main_color
+        border-radius: 0px
+        transform: rotate(90deg)
+        &_scroll
+            background-color: #fff
+        &_footer
+            background-color: #fff
+            width: 3.5rem
+            height: 4px
+            top: 2.1875rem
+            right: 6.25rem
+.list
+    list-style-type: none
+    display: flex
+    justify-content: space-between
+    width: 100%
+    margin: 0
+    padding: 0
+    &__item
+        align-items: center
+        display: flex
+    &__link
+        text-transform: uppercase
+        text-decoration: none
+        font-family: Roboto
+        font-weight: 400
+        font-size: 1.5rem
+        letter-spacing: 2px
+        color: $main_color
+        position: relative
+        transition: 0.35s linear
+        &:hover
+            &::after
+                width: 100%
+                left: 0
+                background: #fff
+        &::after
+            content: ""
+            width: 0
+            height: 3px
+            position: absolute
+            bottom: 0
+            left: 0
+            background: transparent
+            transition: 0.35s linear
+        &_scroll
+            color: #fff
+.about
+    padding-top: 6.25rem
+    padding-bottom: 4.6875rem
+    background: #fff
+    &__container
+        width: 90rem
+        max-width: calc( 100% - 2.5rem )
+        display: flex
+        justify-content: space-between
+        margin: 0 auto
+    &__content
+        display: flex
+        flex-direction: column
+    &__title
+        font-family: Roboto
+        font-style: normal
+        font-weight: bold
+        font-size: 1.875rem
+        letter-spacing: 0.205em
+        text-transform: uppercase
+        color: $main_color
+    &__descr
+        max-width: 33.375rem
+        margin-top: 2.6875rem
+        font-family: Roboto
+        font-style: normal
+        font-weight: 300
+        font-size: 1.375rem
+        line-height: 2rem
+        text-transform: capitalize
+        color: #8D7F7F
+    &__slide
+        width: 100%
+        margin-top: 6.25rem
+.apartments
+    padding-top: 4.6875rem
+    padding-bottom: 6.25rem
+    background-color: $second_color
+    &__container
+        width: 90rem
+        max-width: calc( 100% - 2.5rem )
+        margin: 0 auto
+    &__catalog
+        max-width: 90rem
+        display: flex
+        flex-wrap: wrap
+        column-gap: 3.75rem
+        row-gap: 4.875rem
+        padding-top: 3.75rem
+    &__title
+        font-family: Roboto
+        font-style: normal
+        font-weight: 400
+        font-size: 4.5rem
+        text-transform: capitalize
+        color: $main_color
+        text-align: center
+.catalog-item__img
+    max-width: 27.5rem
+    height: 18.375rem
+.service
+    padding: 4.6875rem 0 6.25rem 0
+    background-color: #fff
+    &__wrapper
+        margin: 0 auto
+        width: 87.5rem
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__item
+        display: flex
+        flex-direction: column
+        align-items: center
+        max-width: 28.125rem
+        &:last-child
+            margin-top: 2.5rem
+    &__icon
+        width: 10.9375rem
+        height: 10.5rem
+    &__subtitle
+        margin-top: 2.25rem
+        font-family: Roboto
+        font-style: normal
+        font-weight: bold
+        font-size: 2.25rem
+        line-height: 2.625rem
+        text-transform: uppercase
+        color: #000000
+        text-align: center
+.slider
+    background-color: $second_color
+    padding: 6.25rem 0 6.25rem 0
+    &__item
+        width: 90rem
+        margin: 0 auto
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__img
+        max-width: 70rem
+        height: 32.3125rem
+.prev, .next
+    align-items: center
+    border: none
+    width: 4.25rem
+    height: 4.25rem
+    border: 2px solid $main_color
+    box-sizing: border-box
+    border-radius: 100px
+    &:hover
+        cursor: pointer
+        border: none
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(231deg) brightness(111%) contrast(101%) invert(13%) sepia(6%) saturate(4718%) hue-rotate(138deg) brightness(95%) contrast(89%)
+.next
+    transform: rotate(-180deg)
+.prev
+    /** margin-right: 3.31rem **/
+.footer
+    height: 18.75rem
+    background: #000000
+    padding: 4.6875rem 0 2rem 0
+    &__container
+        width: 90rem
+        max-width: calc( 100% - 2.5rem )
+        display: flex
+        justify-content: space-between
+        margin: 0 auto
+        align-items: flex-start
+    &__content
+        width: 43.75rem
+        height: 9.375rem
+        display: flex
+        justify-content: space-between
+        margin: 0 auto
+    &__contacts
+        display: flex
+        flex-direction: column
+        width: 18.5rem
+        &_title
+            font-family: Roboto
+            font-style: normal
+            font-weight: 400
+            font-size: 1.375rem
+            color: #FFFFFF
+            text-align: left
+            line-height: 115%
+            letter-spacing: 0.09em
+        &_location
+            padding-top: 1.875rem
+            &-text
+                font-family: Roboto
+                font-style: normal
+                font-weight: 300
+                font-size: 1rem
+                line-height: 2.1875rem
+                letter-spacing: 0.09em
+                text-transform: capitalize
+                color: #FFFFFF
+                text-decoration: none
+            &-case
+                text-transform: lowercase
+    &__callback
+        display: flex
+        flex-direction: column
+        width: 14.625rem
+        &_mail
+            font-family: Roboto
+            font-style: normal
+            font-weight: 300
+            font-size: 1rem
+            line-height: 2.1875rem
+            letter-spacing: 0.10em
+            text-transform: lowercase
+            color: #FFFFFF
+            text-decoration: none
+        &_tel
+            font-family: Roboto
+            font-style: normal
+            font-weight: 300
+            font-size: 1rem
+            line-height: 2.1875rem
+            letter-spacing: 0.10em
+            color: #FFFFFF
+            text-decoration: none
+    &__social
+        margin-top: 4.0625rem
+        width: 21rem
+        display: flex
+        justify-content: space-between
+        &_item
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 3rem
+            height: 3rem
+            background-color: #0000
+            border-radius: 100%
+            margin: 0 4px
+            border: 1px solid #ffff
+            box-sizing: border-box
+            filter: drop-shadow(0px 0px 0px #fffff)
+            text-decoration: none
+            list-style-type: none
+            span
+                display: flex
+                justify-content: center
+                align-items: center
+                color: #fff
+            &:hover
+                filter: invert(13%) sepia(8%) saturate(3710%) hue-rotate(137deg) brightness(95%) contrast(88%)
+                cursor: pointer
+                background: transparent
+    &__line
+        width: 100%
+        background: #666666
+        height: 3px
+#copyright
+    margin-top: 1.5625rem
+    text-align: center
+    color: #fff
+
+
+
+
+
+        
+
+
+
+            
+
